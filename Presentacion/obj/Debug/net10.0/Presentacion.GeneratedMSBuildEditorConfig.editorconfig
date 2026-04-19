@@ -19,69 +19,37 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = Presentacion
 build_property.RootNamespace = Presentacion
-build_property.ProjectDir = C:\Users\void\ATI_ORT\P3\N3A-EjemploLibreria\LibreriaN3A\Presentacion\
+build_property.ProjectDir = C:\Users\void\ATI_ORT\P3\Obligatorio_N3A_269475_334780\Presentacion\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\void\ATI_ORT\P3\N3A-EjemploLibreria\LibreriaN3A\Presentacion
+build_property.MSBuildProjectDirectory = C:\Users\void\ATI_ORT\P3\Obligatorio_N3A_269475_334780\Presentacion
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/void/ATI_ORT/P3/N3A-EjemploLibreria/LibreriaN3A/Presentacion/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/void/ATI_ORT/P3/N3A-EjemploLibreria/LibreriaN3A/Presentacion/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/void/ATI_ORT/P3/N3A-EjemploLibreria/LibreriaN3A/Presentacion/Views/Shared/Error.cshtml]
+[C:/Users/void/ATI_ORT/P3/Obligatorio_N3A_269475_334780/Presentacion/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/void/ATI_ORT/P3/N3A-EjemploLibreria/LibreriaN3A/Presentacion/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/void/ATI_ORT/P3/Obligatorio_N3A_269475_334780/Presentacion/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/void/ATI_ORT/P3/N3A-EjemploLibreria/LibreriaN3A/Presentacion/Views/Temas/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYXNcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/void/ATI_ORT/P3/Obligatorio_N3A_269475_334780/Presentacion/Views/Usuario/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/void/ATI_ORT/P3/N3A-EjemploLibreria/LibreriaN3A/Presentacion/Views/Temas/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYXNcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/void/ATI_ORT/P3/N3A-EjemploLibreria/LibreriaN3A/Presentacion/Views/Temas/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYXNcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/void/ATI_ORT/P3/N3A-EjemploLibreria/LibreriaN3A/Presentacion/Views/Temas/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYXNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/void/ATI_ORT/P3/N3A-EjemploLibreria/LibreriaN3A/Presentacion/Views/Temas/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/void/ATI_ORT/P3/N3A-EjemploLibreria/LibreriaN3A/Presentacion/Views/Usuarios/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/void/ATI_ORT/P3/N3A-EjemploLibreria/LibreriaN3A/Presentacion/Views/Usuarios/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcTG9naW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/void/ATI_ORT/P3/N3A-EjemploLibreria/LibreriaN3A/Presentacion/Views/_ViewImports.cshtml]
+[C:/Users/void/ATI_ORT/P3/Obligatorio_N3A_269475_334780/Presentacion/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/void/ATI_ORT/P3/N3A-EjemploLibreria/LibreriaN3A/Presentacion/Views/_ViewStart.cshtml]
+[C:/Users/void/ATI_ORT/P3/Obligatorio_N3A_269475_334780/Presentacion/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/void/ATI_ORT/P3/N3A-EjemploLibreria/LibreriaN3A/Presentacion/Views/Shared/_Layout.cshtml]
+[C:/Users/void/ATI_ORT/P3/Obligatorio_N3A_269475_334780/Presentacion/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-huwsf5vtt9

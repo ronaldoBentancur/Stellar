@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LogicaNegocio.InterfacesDominio
+namespace LogicaNegocio.InterfaceNegocio
 {
     public interface IValidable
     {

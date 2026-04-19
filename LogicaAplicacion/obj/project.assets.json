@@ -12,22 +12,36 @@
           "bin/placeholder/CasosUso.dll": {}
         }
       },
-      "Excepciones/1.0.0": {
+      "Exceptions/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "LogicaNegocio": "1.0.0"
+        },
         "compile": {
-          "bin/placeholder/Excepciones.dll": {}
+          "bin/placeholder/Exceptions.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Excepciones.dll": {}
+          "bin/placeholder/Exceptions.dll": {}
+        }
+      },
+      "LogicaAccesoDatos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Exceptions": "1.0.0",
+          "LogicaNegocio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LogicaAccesoDatos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LogicaAccesoDatos.dll": {}
         }
       },
       "LogicaNegocio/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
-        "dependencies": {
-          "Excepciones": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/LogicaNegocio.dll": {}
         },
@@ -43,10 +57,15 @@
       "path": "../CasosUso/CasosUso.csproj",
       "msbuildProject": "../CasosUso/CasosUso.csproj"
     },
-    "Excepciones/1.0.0": {
+    "Exceptions/1.0.0": {
       "type": "project",
-      "path": "../Excepciones/Excepciones.csproj",
-      "msbuildProject": "../Excepciones/Excepciones.csproj"
+      "path": "../Exceptions/Exceptions.csproj",
+      "msbuildProject": "../Exceptions/Exceptions.csproj"
+    },
+    "LogicaAccesoDatos/1.0.0": {
+      "type": "project",
+      "path": "../LogicaAccesoDatos/LogicaAccesoDatos.csproj",
+      "msbuildProject": "../LogicaAccesoDatos/LogicaAccesoDatos.csproj"
     },
     "LogicaNegocio/1.0.0": {
       "type": "project",
@@ -57,7 +76,8 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "CasosUso >= 1.0.0",
-      "Excepciones >= 1.0.0",
+      "Exceptions >= 1.0.0",
+      "LogicaAccesoDatos >= 1.0.0",
       "LogicaNegocio >= 1.0.0"
     ]
   },
@@ -68,11 +88,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\void\\ATI_ORT\\P3\\N3A-EjemploLibreria\\LibreriaN3A\\LogicaAplicacion\\LogicaAplicacion.csproj",
+      "projectUniqueName": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\LogicaAplicacion\\LogicaAplicacion.csproj",
       "projectName": "LogicaAplicacion",
-      "projectPath": "C:\\Users\\void\\ATI_ORT\\P3\\N3A-EjemploLibreria\\LibreriaN3A\\LogicaAplicacion\\LogicaAplicacion.csproj",
+      "projectPath": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\LogicaAplicacion\\LogicaAplicacion.csproj",
       "packagesPath": "C:\\Users\\void\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\void\\ATI_ORT\\P3\\N3A-EjemploLibreria\\LibreriaN3A\\LogicaAplicacion\\obj\\",
+      "outputPath": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\LogicaAplicacion\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -94,14 +114,17 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\void\\ATI_ORT\\P3\\N3A-EjemploLibreria\\LibreriaN3A\\CasosUso\\CasosUso.csproj": {
-              "projectPath": "C:\\Users\\void\\ATI_ORT\\P3\\N3A-EjemploLibreria\\LibreriaN3A\\CasosUso\\CasosUso.csproj"
+            "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\CasosUso\\CasosUso.csproj": {
+              "projectPath": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\CasosUso\\CasosUso.csproj"
             },
-            "C:\\Users\\void\\ATI_ORT\\P3\\N3A-EjemploLibreria\\LibreriaN3A\\Excepciones\\Excepciones.csproj": {
-              "projectPath": "C:\\Users\\void\\ATI_ORT\\P3\\N3A-EjemploLibreria\\LibreriaN3A\\Excepciones\\Excepciones.csproj"
+            "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\Exceptions\\Exceptions.csproj": {
+              "projectPath": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\Exceptions\\Exceptions.csproj"
             },
-            "C:\\Users\\void\\ATI_ORT\\P3\\N3A-EjemploLibreria\\LibreriaN3A\\LogicaNegocio\\LogicaNegocio.csproj": {
-              "projectPath": "C:\\Users\\void\\ATI_ORT\\P3\\N3A-EjemploLibreria\\LibreriaN3A\\LogicaNegocio\\LogicaNegocio.csproj"
+            "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj": {
+              "projectPath": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\LogicaAccesoDatos\\LogicaAccesoDatos.csproj"
+            },
+            "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\LogicaNegocio\\LogicaNegocio.csproj": {
+              "projectPath": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\LogicaNegocio\\LogicaNegocio.csproj"
             }
           }
         }

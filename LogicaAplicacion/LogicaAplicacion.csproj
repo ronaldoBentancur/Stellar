@@ -8,8 +8,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CasosUso\CasosUso.csproj" />
-    <ProjectReference Include="..\Excepciones\Excepciones.csproj" />
+    <ProjectReference Include="..\Exceptions\Exceptions.csproj" />
+    <ProjectReference Include="..\LogicaAccesoDatos\LogicaAccesoDatos.csproj" />
     <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mappers\" />
   </ItemGroup>
 
 </Project>

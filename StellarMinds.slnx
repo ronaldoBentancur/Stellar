@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="CasosUso/CasosUso.csproj" Id="8d6fdc5c-b35a-4eb3-b96a-a2cadf7d4fda" />
+  <Project Path="Exceptions/Exceptions.csproj" Id="43a4c177-342b-49a3-baeb-5e99e11aff8a" />
+  <Project Path="LogicaAccesoDatos/LogicaAccesoDatos.csproj" />
+  <Project Path="LogicaAplicacion/LogicaAplicacion.csproj" />
+  <Project Path="LogicaNegocio/LogicaNegocio.csproj" />
+  <Project Path="Presentacion/Presentacion.csproj" />
+</Solution>
