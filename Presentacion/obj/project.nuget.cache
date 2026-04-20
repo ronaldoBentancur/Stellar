@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hPk7R40Txw0=",
+  "dgSpecHash": "12XYpWigBe0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\void\\ORT_ATI\\P3\\Obligatorio_N3A_269475_334780\\Presentacion\\Presentacion.csproj",
+  "projectFilePath": "C:\\Users\\void\\ORT_ATI\\P3\\Stellar\\Presentacion\\Presentacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\void\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\void\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
