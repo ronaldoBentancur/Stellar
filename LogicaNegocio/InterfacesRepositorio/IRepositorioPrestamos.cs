@@ -5,8 +5,8 @@ using System.Text;
 
 namespace LogicaNegocio.InterfacesRepositorio
 {
-    public interface IRepositorioUsuarios: IRepositorio<Usuario>
+    public interface IRepositorioPrestamos : IRepositorio<Prestamo>
     {
-        Usuario Login(string email, string password);
+        public bool EstadoPrestamo (int idEquipo);
     }
 }

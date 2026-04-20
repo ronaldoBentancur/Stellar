@@ -1,4 +1,5 @@
 ﻿using LogicaNegocio.InterfaceNegocio;
+using Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,16 +10,23 @@ namespace LogicaNegocio.ValueObjects
     {
         public string Value { get; private set; }
 
+        public Email() { }
+
+        public Email(string value)
+        {
+            Value = value;
+            Validar();
+        }
 
         public void Validar()
         {
-            if (string.IsNullOrWhiteSpace(Value))
+            if (string.IsNullOrEmpty(Value))
             {
-                throw new ArgumentException("El email no puede estar vacío.");
+                throw new DatoInvalidoException("El email no puede estar vacío.");
             }
             if (!Value.Contains("@"))
             {
-                throw new ArgumentException("El email debe contener '@'.");
+                throw new DatoInvalidoException("El email debe contener '@'.");
             }
         }
     }

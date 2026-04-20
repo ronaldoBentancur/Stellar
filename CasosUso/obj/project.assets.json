@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\CasosUso\\CasosUso.csproj",
+      "projectUniqueName": "C:\\Users\\void\\ORT_ATI\\P3\\Obligatorio_N3A_269475_334780\\CasosUso\\CasosUso.csproj",
       "projectName": "CasosUso",
-      "projectPath": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\CasosUso\\CasosUso.csproj",
+      "projectPath": "C:\\Users\\void\\ORT_ATI\\P3\\Obligatorio_N3A_269475_334780\\CasosUso\\CasosUso.csproj",
       "packagesPath": "C:\\Users\\void\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\CasosUso\\obj\\",
+      "outputPath": "C:\\Users\\void\\ORT_ATI\\P3\\Obligatorio_N3A_269475_334780\\CasosUso\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

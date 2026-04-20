@@ -4,10 +4,9 @@ using System.Text;
 
 namespace LogicaNegocio.Enumerados
 {
-    public enum TipoMontura
+    public enum EstadoPrestamo
     {
-        Ecuatorial,
-        AltAzimutal,
-        Hibrida,
+        EnPrestamo,
+        Devuelto,
     }
 }

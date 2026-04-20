@@ -7,51 +7,48 @@ namespace Presentacion.Controllers
 {
     public class UsuarioController : Controller
     {
-        public class UsuariosController : Controller
+        public ILogin CULogin { get; set; }
+
+        public UsuarioController (ILogin cuLogin)
         {
-            public ILogin CULogin { get; set; }
+            CULogin = cuLogin;
+        }
 
-            public UsuariosController(ILogin cuLogin)
+
+        public IActionResult Index()
+        {
+            string rol = HttpContext.Session.GetString("rol");
+            if (string.IsNullOrEmpty(rol))
             {
-                CULogin = cuLogin;
-            }
-
-
-            public IActionResult Index()
-            {
-                string rol = HttpContext.Session.GetString("rol");
-                if (string.IsNullOrEmpty(rol))
-                {
-                    return RedirectToAction("Login");
-                }
-                return View("Home");
-            }
-
-            public IActionResult Login()
-            {
-                return View();
-            }
-
-            public IActionResult Logout()
-            {
-                HttpContext.Session.Clear();
                 return RedirectToAction("Login");
             }
+            return View("Home");
+        }
 
-            [HttpPost]
-            public IActionResult Login(UsuarioDTO dto)
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login");
+        }
+
+        [HttpPost]
+        public IActionResult Login(UsuarioDTO dto)
+        {
+            UsuarioDTO usuarioLogueado = CULogin.EjecutarLogin(dto.Email, dto.Password);
+            if (usuarioLogueado == null)
             {
-                UsuarioDTO usuarioLogueado = CULogin.EjecutarLogin(dto.Email, dto.Password);
-                if (usuarioLogueado == null)
-                {
-                    ViewBag.Error = "El email o la contraseña son incorrectos";
-                    return View(dto);
-                }
-                else
-                {
-                    HttpContext.Session.SetString("rol", usuarioLogueado.Rol);
-                    return RedirectToAction("Index", "Temas");
-                }
+                ViewBag.Error = "El email o la contraseña son incorrectos";
+                return View(dto);
+            }
+            else
+            {
+                HttpContext.Session.SetString("rol", usuarioLogueado.Rol);
+                return RedirectToAction("Index", "Usuario");
             }
         }
     }

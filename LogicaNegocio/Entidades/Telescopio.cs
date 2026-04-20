@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LogicaNegocio.ClasesNegocio
+namespace LogicaNegocio.Entidades
 {
-    public class Telescopio
+    public class Telescopio :Equipo
     {
     }
 }

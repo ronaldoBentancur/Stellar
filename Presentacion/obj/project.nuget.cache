@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "07Ua4fixpHs=",
+  "dgSpecHash": "hPk7R40Txw0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\Presentacion\\Presentacion.csproj",
+  "projectFilePath": "C:\\Users\\void\\ORT_ATI\\P3\\Obligatorio_N3A_269475_334780\\Presentacion\\Presentacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\void\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\void\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -87,15 +87,15 @@
     "C:\\Users\\void\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\10.0.2\\microsoft.visualstudio.web.codegenerators.mvc.10.0.2.nupkg.sha512",
     "C:\\Users\\void\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\void\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\void\\.nuget\\packages\\nuget.common\\6.12.1\\nuget.common.6.12.1.nupkg.sha512",
-    "C:\\Users\\void\\.nuget\\packages\\nuget.configuration\\6.12.1\\nuget.configuration.6.12.1.nupkg.sha512",
+    "C:\\Users\\void\\.nuget\\packages\\nuget.common\\7.3.1\\nuget.common.7.3.1.nupkg.sha512",
+    "C:\\Users\\void\\.nuget\\packages\\nuget.configuration\\7.3.1\\nuget.configuration.7.3.1.nupkg.sha512",
     "C:\\Users\\void\\.nuget\\packages\\nuget.dependencyresolver.core\\6.12.1\\nuget.dependencyresolver.core.6.12.1.nupkg.sha512",
-    "C:\\Users\\void\\.nuget\\packages\\nuget.frameworks\\6.12.1\\nuget.frameworks.6.12.1.nupkg.sha512",
+    "C:\\Users\\void\\.nuget\\packages\\nuget.frameworks\\7.3.1\\nuget.frameworks.7.3.1.nupkg.sha512",
     "C:\\Users\\void\\.nuget\\packages\\nuget.librarymodel\\6.12.1\\nuget.librarymodel.6.12.1.nupkg.sha512",
-    "C:\\Users\\void\\.nuget\\packages\\nuget.packaging\\6.12.1\\nuget.packaging.6.12.1.nupkg.sha512",
+    "C:\\Users\\void\\.nuget\\packages\\nuget.packaging\\7.3.1\\nuget.packaging.7.3.1.nupkg.sha512",
     "C:\\Users\\void\\.nuget\\packages\\nuget.projectmodel\\6.12.1\\nuget.projectmodel.6.12.1.nupkg.sha512",
-    "C:\\Users\\void\\.nuget\\packages\\nuget.protocol\\6.12.1\\nuget.protocol.6.12.1.nupkg.sha512",
-    "C:\\Users\\void\\.nuget\\packages\\nuget.versioning\\6.12.1\\nuget.versioning.6.12.1.nupkg.sha512",
+    "C:\\Users\\void\\.nuget\\packages\\nuget.protocol\\7.3.1\\nuget.protocol.7.3.1.nupkg.sha512",
+    "C:\\Users\\void\\.nuget\\packages\\nuget.versioning\\7.3.1\\nuget.versioning.7.3.1.nupkg.sha512",
     "C:\\Users\\void\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\void\\.nuget\\packages\\system.composition\\9.0.0\\system.composition.9.0.0.nupkg.sha512",
     "C:\\Users\\void\\.nuget\\packages\\system.composition.attributedmodel\\9.0.0\\system.composition.attributedmodel.9.0.0.nupkg.sha512",
@@ -106,33 +106,8 @@
     "C:\\Users\\void\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.0\\system.configuration.configurationmanager.9.0.0.nupkg.sha512",
     "C:\\Users\\void\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
     "C:\\Users\\void\\.nuget\\packages\\system.reflection.metadataloadcontext\\8.0.0\\system.reflection.metadataloadcontext.8.0.0.nupkg.sha512",
-    "C:\\Users\\void\\.nuget\\packages\\system.security.cryptography.pkcs\\6.0.4\\system.security.cryptography.pkcs.6.0.4.nupkg.sha512",
+    "C:\\Users\\void\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.1\\system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
     "C:\\Users\\void\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.6\\system.security.cryptography.protecteddata.9.0.6.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1901",
-      "level": "Warning",
-      "message": "El paquete \"NuGet.Packaging\" 6.12.1 tiene una vulnerabilidad de gravedad baja conocida, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
-      "projectPath": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\Presentacion\\Presentacion.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\Presentacion\\Presentacion.csproj",
-      "libraryId": "NuGet.Packaging",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1901",
-      "level": "Warning",
-      "message": "El paquete \"NuGet.Protocol\" 6.12.1 tiene una vulnerabilidad de gravedad baja conocida, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
-      "projectPath": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\Presentacion\\Presentacion.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\void\\ATI_ORT\\P3\\Obligatorio_N3A_269475_334780\\Presentacion\\Presentacion.csproj",
-      "libraryId": "NuGet.Protocol",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  "logs": []
 }

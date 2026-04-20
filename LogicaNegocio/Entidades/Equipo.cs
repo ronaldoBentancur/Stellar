@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LogicaNegocio.ClasesNegocio
+namespace LogicaNegocio.Entidades
 {
     public abstract class Equipo
     {

@@ -1,4 +1,4 @@
-﻿using LogicaNegocio.ClasesNegocio;
+﻿using LogicaNegocio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Text;
