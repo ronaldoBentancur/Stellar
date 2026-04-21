@@ -3,10 +3,12 @@ using Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LogicaNegocio.ValueObjects
 {
-    public class Password : IValidable
+    [ComplexType]
+    public class Password
     {
         public string Value { get; private set; }
 
@@ -18,7 +20,7 @@ namespace LogicaNegocio.ValueObjects
             Validar();
         }
 
-        public void Validar()
+        private void Validar()
         {
 
             if (string.IsNullOrEmpty(Value))
@@ -40,14 +42,14 @@ namespace LogicaNegocio.ValueObjects
             {
                 throw new DatoInvalidoException("La contraseña debe contener al menos un número.");
             }
-            if (Value.Any(char.IsPunctuation))
+            if (!Value.Any(char.IsPunctuation))
             {
 
                 throw new DatoInvalidoException("La contraseña no debe contener caracteres especiales.");
             }
-            if (Value.Length < 6)
+            if (Value.Length < 8)
             {
-                throw new DatoInvalidoException("La contraseña debe tener al menos 6 caracteres.");
+                throw new DatoInvalidoException("La contraseña debe tener al menos 8 caracteres.");
             }
         }
     }

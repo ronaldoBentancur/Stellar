@@ -1,16 +1,14 @@
-﻿using LogicaNegocio.ValueObjects;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LogicaNegocio.Entidades
+namespace CasosUso.DTOs
 {
-    public class Telescopio :Equipo
+    public class EquipoTelescopioDTO : EquipoDTO
     {
         public decimal Apertura { get; set; }
-        public RelacionFocal RelacionFocal { get; set; }
+        public int RelacionFocal { get; set; }
         public decimal DistanciaFocal { get; set; }
         public decimal Peso { get; set; }
-
     }
 }

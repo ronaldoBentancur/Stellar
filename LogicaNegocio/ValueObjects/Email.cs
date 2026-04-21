@@ -3,10 +3,12 @@ using Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LogicaNegocio.ValueObjects
 {
-    public class Email : IValidable
+    [ComplexType]
+    public class Email 
     {
         public string Value { get; private set; }
 
@@ -18,7 +20,7 @@ namespace LogicaNegocio.ValueObjects
             Validar();
         }
 
-        public void Validar()
+        private void Validar()
         {
             if (string.IsNullOrEmpty(Value))
             {
