@@ -1,29 +1,32 @@
-﻿using CasosUso.InterfacesCU;
-using CasosUso.DTOs;
-using Microsoft.AspNetCore.Http;
+﻿using CasosUso.DTOs;
+using CasosUso.InterfacesCU;
+using LogicaAplicacion.DTOs;
+using LogicaAplicacion.InterfacesCasosUso;
+using LogicaNegocio.InterfacesRepositorio;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace Presentacion.Controllers
 {
     public class UsuarioController : Controller
     {
-        public ILogin CULogin { get; set; }
+        //readonly 
+        public IRepositorioUsuarios RepoUsuarios { get; set; }
 
-        public UsuarioController (ILogin cuLogin)
+        public ILogin CULogin { get; set; }
+        public ICUAltaUsuario CUAltaUsuario { get; set; }
+
+        public UsuarioController(ILogin cuLogin, ICUAltaUsuario cuAltaUsuario, IRepositorioUsuarios repoUsuarios)
         {
             CULogin = cuLogin;
+            CUAltaUsuario = cuAltaUsuario;
+            RepoUsuarios = repoUsuarios;
         }
 
 
-        public IActionResult Index()
-        {
-            string rol = HttpContext.Session.GetString("rol");
-            if (string.IsNullOrEmpty(rol))
-            {
-                return RedirectToAction("Login");
-            }
-            return View("Home");
-        }
+        
+
+
 
         public IActionResult Login()
         {
@@ -48,8 +51,64 @@ namespace Presentacion.Controllers
             else
             {
                 HttpContext.Session.SetString("rol", usuarioLogueado.Rol);
-                return RedirectToAction("Index", "Usuario");
+                return View("Home");
             }
         }
+
+      
+        public IActionResult Alta()
+        {
+            // Solo puede entrar si es Administrador 
+            string rol = HttpContext.Session.GetString("rol");
+
+            if (rol != "Administrador")
+            {
+                //Cambiar el Login por una view que de error al no ser admin
+                return RedirectToAction("ListaAlta", "Usuario");
+            }
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Alta(AltaUsuarioDTO dto)
+        {
+            try
+            {
+                // llamamos al caso de uso para validar y mapear
+                CUAltaUsuario.EjecutarAlta(dto);
+                TempData["MensajeExito"] = "El usuario fue creado correctamente.";
+                return RedirectToAction("ListaAlta");
+            }
+            catch (Exception ex)
+            {
+                // guardamos la excepcion en el ViewBag.Error
+                ViewBag.Error = ex.Message;
+
+                // Le devolvemos el DTO a la vista 
+                return View(dto);
+            }
+        }
+
+
+
+        public IActionResult ListaAlta()
+        {
+            string rol = HttpContext.Session.GetString("rol");
+            if (string.IsNullOrEmpty(rol))
+            {
+                return RedirectToAction("Login");
+            }
+            var listaUsuarios = RepoUsuarios.FindAll();
+
+
+            return View(listaUsuarios);
+        }
+
+
+
+
+
+
     }
 }

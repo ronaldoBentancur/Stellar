@@ -6,8 +6,8 @@ namespace LogicaNegocio.Enumerados
 {
     public enum Rol
     {
-        Administrados,
-        Coordinador,
-        Socio,
+        Administrador = 0,
+        Coordinador = 1,
+        Socio = 2,
     }
 }

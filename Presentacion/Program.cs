@@ -1,7 +1,10 @@
-using LogicaAccesoDatos.Repositorios;
-using LogicaNegocio.InterfacesRepositorio;
-using LogicaAplicacion.CasosDeUso;
 using CasosUso.InterfacesCU;
+using LogicaAccesoDatos.Repositorios;
+using LogicaAplicacion.CasosDeUso;
+using LogicaAplicacion.CasosUso;
+using LogicaAplicacion.InterfacesCasosUso;
+using LogicaNegocio.InterfacesRepositorio;
+
 
 namespace Presentacion
 {
@@ -16,6 +19,8 @@ namespace Presentacion
 
             builder.Services.AddScoped<IRepositorioUsuarios, RepositorioUsuarios>(); 
             builder.Services.AddScoped<ILogin, Login>();
+            //VER
+            builder.Services.AddScoped<ICUAltaUsuario, CUAltaUsuario>();
 
             builder.Services.AddSession();
             var app = builder.Build();

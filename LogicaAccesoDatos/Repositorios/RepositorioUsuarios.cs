@@ -22,7 +22,7 @@ namespace LogicaAccesoDatos.Repositorios
                 Telefono = "099111222",
                 Email = new Email("admin@sistema.com"),
                 Password = new Password("Admin1234"),
-                Rol = Rol.Administrados
+                Rol = Rol.Administrador
             },
             new Usuario()
             {
@@ -40,7 +40,7 @@ namespace LogicaAccesoDatos.Repositorios
 
         public void Add(Usuario nuevo)
         {
-            throw new NotImplementedException();
+            usuarios.Add(nuevo);
         }
 
         public IEnumerable<Usuario> FindAll()

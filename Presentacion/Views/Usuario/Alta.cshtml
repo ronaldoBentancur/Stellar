@@ -1,0 +1,74 @@
+﻿@model LogicaAplicacion.DTOs.AltaUsuarioDTO
+
+@{
+    ViewData["Title"] = "Alta de Usuario";
+}
+
+<div class="container mt-4">
+    <h2>Alta de Nuevo Usuario</h2>
+    <hr />
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            <strong>¡Atención!</strong> @ViewBag.Error
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Alta" method="post">
+                
+                <div class="form-group mb-3">
+                    <label asp-for="Nombre" class="control-label">Nombre</label>
+                    <input asp-for="Nombre" class="form-control" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Apellido" class="control-label">Apellido</label>
+                    <input asp-for="Apellido" class="form-control" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="NombreUsuario" class="control-label">Nombre de Usuario</label>
+                    <input asp-for="NombreUsuario" class="form-control" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Email" class="control-label">Correo Electrónico</label>
+                    <input type="email" asp-for="Email" class="form-control" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Password" class="control-label">Contraseña</label>
+                    <input type="password" asp-for="Password" class="form-control" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Direccion" class="control-label">Dirección</label>
+                    <input asp-for="Direccion" class="form-control" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Telefono" class="control-label">Teléfono</label>
+                    <input asp-for="Telefono" class="form-control" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Rol" class="control-label">Rol del Usuario</label>
+                    <select asp-for="Rol" class="form-select" required>
+                        <option value="">-- Seleccione un Rol --</option>
+                        <option value="Socio">Socio</option>
+                        <option value="Coordinador">Coordinador</option>
+                        <option value="Administrador">Administrador</option>
+                    </select>
+                </div>
+
+                <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-primary">Guardar Usuario</button>
+                    <a asp-action="Index" asp-controller="Usuario" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

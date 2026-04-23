@@ -1,4 +1,4 @@
-﻿using CasosUso.DTOs;
+﻿using CasosUso.DTOs.DTOEquipo;
 using LogicaNegocio.Entidades;
 using LogicaNegocio.ValueObjects;
 using System;
