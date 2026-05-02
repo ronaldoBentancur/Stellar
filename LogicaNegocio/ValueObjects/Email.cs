@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace LogicaNegocio.ValueObjects
 {
     [ComplexType]
-    public class Email 
+    public class Email:IEquatable<Email>
     {
         public string Value { get; private set; }
 
@@ -30,6 +30,12 @@ namespace LogicaNegocio.ValueObjects
             {
                 throw new DatoInvalidoException("El email debe contener '@'.");
             }
+        }
+
+        public bool Equals(Email other)
+        {
+            if (other == null) return false;
+            return this.Value.Equals(other.Value);
         }
     }
 }

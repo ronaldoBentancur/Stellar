@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace LogicaNegocio.ValueObjects
 {
     [ComplexType]
-    public class Password
+    public class Password : IEquatable<Password>
     {
         public string Value { get; private set; }
 
@@ -51,6 +51,12 @@ namespace LogicaNegocio.ValueObjects
             {
                 throw new DatoInvalidoException("La contraseña debe tener al menos 8 caracteres.");
             }
+        }
+
+        public bool Equals(Password other)
+        {
+            if (other == null) return false;
+            return this.Value.Equals(other.Value);
         }
     }
 }

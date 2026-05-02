@@ -1,7 +1,9 @@
-﻿using LogicaNegocio.Entidades;
+﻿using LogicaAccesoDatos.EF;
+using LogicaNegocio.Entidades;
 using LogicaNegocio.Enumerados;
 using LogicaNegocio.InterfacesRepositorio;
 using LogicaNegocio.ValueObjects;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,42 +12,21 @@ namespace LogicaAccesoDatos.Repositorios
 {
     public class RepositorioUsuarios : IRepositorioUsuarios
     {
-        private static List<Usuario> usuarios = new List<Usuario>()
+        public StellarMindsContext Contexto { get; set; }
+
+        public RepositorioUsuarios(StellarMindsContext ctx)
         {
-            new Usuario()
-            {
-                Id = 1,
-                Nombre = "Admin",
-                Apellido = "Sistema",
-                NombreUsuario = "admin1",
-                Direccion = "Calle 123",
-                Telefono = "099111222",
-                Email = new Email("admin@sistema.com"),
-                Password = new Password("Admin1234"),
-                Rol = Rol.Administrador
-            },
-            new Usuario()
-            {
-                Id = 2,
-                Nombre = "Socio",
-                Apellido = "Prueba",
-                NombreUsuario = "socio1",
-                Direccion = "Calle 456",
-                Telefono = "099333444",
-                Email = new Email("socio@sistema.com"),
-                Password = new Password("Socio1234"),
-                Rol = Rol.Socio
-            }
-        };
+            Contexto = ctx;
+        }
 
         public void Add(Usuario nuevo)
         {
-            usuarios.Add(nuevo);
+            throw new NotImplementedException();
         }
 
         public IEnumerable<Usuario> FindAll()
         {
-            return usuarios;
+            throw new NotImplementedException();
         }
 
         public Usuario FindById(int id)
@@ -55,12 +36,13 @@ namespace LogicaAccesoDatos.Repositorios
 
         public Usuario Login(string email, string password)
         {
-            foreach (Usuario usu in usuarios)
-            {
-                if (usu.Email.Value == email && usu.Password.Value == password) return usu;
-            }
+            Usuario buscado = null;
+            buscado = Contexto.Usuarios
+                        .Include(usuario => usuario.Rol) //Como el rol esta en otra tabla , hay que incluirlo para que se traiga toda la info
+                        .Where(usuario => usuario.Email.Value == email && usuario.Password.Value == password) //Filtro para encontrar el usuario.
+                        .Single();//Single() devuelve un solo elemento, si no encuentra ninguno o encuentra mas de uno, lanza una excepcion
 
-            return null;
+            return buscado;
         }
 
         public void Remove(int id)
@@ -72,8 +54,6 @@ namespace LogicaAccesoDatos.Repositorios
         {
             throw new NotImplementedException();
         }
-
-
     }
 }
 

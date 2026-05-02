@@ -1,10 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using LogicaAplicacion.DTOs;
+using LogicaAplicacion.InterfacesCasosUso;
 
-namespace LogicaAplicacion.InterfacesCU
+namespace LogicaAplicacion.InterfacesCasosUso
 {
-    public interface IAltaPrestamo
+    public interface ICUAltaPrestamo
     {
+        void EjecutarAlta(PrestamoAltaDTO dto);
     }
+
+   
 }
+

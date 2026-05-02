@@ -8,7 +8,7 @@ using System.Text;
 namespace LogicaNegocio.ValueObjects
 {
     [ComplexType]
-    public class RelacionFocal
+    public class RelacionFocal : IEquatable<RelacionFocal>
     {
         public int Value { get; private set; }
 
@@ -28,6 +28,12 @@ namespace LogicaNegocio.ValueObjects
         public override string ToString()
         {
             return "f/" + Value.ToString();
+        }
+
+        public bool Equals(RelacionFocal other)
+        {
+            if (other == null) return false;
+            return this.Value.Equals(other.Value);
         }
     }
 }
