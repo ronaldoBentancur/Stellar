@@ -9,5 +9,10 @@ namespace LogicaAccesoDatos.EF
     public class StellarMindsContext:DbContext
     {
         public DbSet<Usuario> Usuarios { get; set; }
-    }
+
+
+        public StellarMindsContext(DbContextOptions<StellarMindsContext> options) : base(options)
+        {
+        }
+    }   
 }

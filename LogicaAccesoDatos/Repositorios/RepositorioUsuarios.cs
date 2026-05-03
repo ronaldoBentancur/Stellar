@@ -36,9 +36,8 @@ namespace LogicaAccesoDatos.Repositorios
 
         public Usuario Login(string email, string password)
         {
-            Usuario buscado = null;
+            Usuario? buscado = null;
             buscado = Contexto.Usuarios
-                        .Include(usuario => usuario.Rol) //Como el rol esta en otra tabla , hay que incluirlo para que se traiga toda la info
                         .Where(usuario => usuario.Email.Value == email && usuario.Password.Value == password) //Filtro para encontrar el usuario.
                         .Single();//Single() devuelve un solo elemento, si no encuentra ninguno o encuentra mas de uno, lanza una excepcion
 

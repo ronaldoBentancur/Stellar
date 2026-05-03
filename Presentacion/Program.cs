@@ -1,9 +1,11 @@
 using CasosUso.InterfacesCU;
+using LogicaAccesoDatos.EF;
 using LogicaAccesoDatos.Repositorios;
 using LogicaAplicacion.CasosDeUso;
 using LogicaAplicacion.CasosUso;
 using LogicaAplicacion.InterfacesCasosUso;
 using LogicaNegocio.InterfacesRepositorio;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace Presentacion
@@ -16,6 +18,7 @@ namespace Presentacion
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<StellarMindsContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("StellarMindsDB")));
 
             builder.Services.AddScoped<IRepositorioUsuarios, RepositorioUsuarios>(); 
             builder.Services.AddScoped<ILogin, Login>();

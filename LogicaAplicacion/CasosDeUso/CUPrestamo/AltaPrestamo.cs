@@ -1,87 +1,87 @@
-﻿using LogicaAplicacion.DTOs;
-using LogicaAplicacion.InterfacesCasosUso;
-using LogicaAplicacion.Mappers;
-using LogicaNegocio.Entidades;
-using LogicaNegocio.InterfacesRepositorio;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿//using logicaaplicacion.dtos;
+//using logicaaplicacion.interfacescasosuso;
+//using logicaaplicacion.mappers;
+//using logicanegocio.entidades;
+//using logicanegocio.interfacesrepositorio;
+//using system;
+//using system.collections.generic;
+//using system.text;
 
-namespace LogicaAplicacion.CasosDeUso
-    // VER CAPACIDAD DTO y los REPO
-{
-    public class AltaPrestamo
-    {
-        public interface ICUAltaPrestamo
-        {
-            void Ejecutar(PrestamoAltaDTO dto);
-        }
-    }
+//namespace logicaaplicacion.casosdeuso
+//    // ver capacidad dto y los repo
+//{
+//    public class altaprestamo
+//    {
+//        public interface icualtaprestamo
+//        {
+//            void ejecutar(prestamoaltadto dto);
+//        }
+//    }
 
 
 
-    public class CUAltaPrestamo : ICUAltaPrestamo
-    {
-        private readonly IRepositorioPrestamos _repoPrestamos;
-        private readonly IRepositorioEquipos _repoEquipos;
-        //private readonly IRepositorioSocios _repoSocios; // CLASE SOCIOS
+//    public class cualtaprestamo : icualtaprestamo
+//    {
+//        private readonly irepositorioprestamos _repoprestamos;
+//        private readonly irepositorioequipos _repoequipos;
+//        //private readonly irepositoriosocios _reposocios; // clase socios
 
-        public CUAltaPrestamo(IRepositorioPrestamos repoP, IRepositorioEquipos repoE, //IRepositorioSocios repoS)
-        {
-            _repoPrestamos = repoP;
-            _repoEquipos = repoE;
-            //_repoSocios = repoS;
-        }
+//        public cualtaprestamo(irepositorioprestamos repop, irepositorioequipos repoe) //irepositoriosocios repos)
+//        {
+//            _repoprestamos = repop;
+//            _repoequipos = repoe;
+//            //_reposocios = repos;
+//        }
 
-        public void EjecutarAlta(PrestamoAltaDTO dto)
-        {
-            // 1. Validaciones 
-            if (dto.SocioId == 0) throw new Exception("Debe seleccionar un socio.");
-            if (dto.TelescopioId == 0) throw new Exception("Debe seleccionar un telescopio.");
-            if (dto.MonturaId == 0) throw new Exception("Debe seleccionar una montura.");
-            if (dto.FechaFin <= dto.FechaInicio) throw new Exception("La fecha de fin debe ser posterior a la de inicio.");
+//        public void ejecutaralta(prestamoaltadto dto)
+//        {
+//            // 1. validaciones 
+//            if (dto.socioid == 0) throw new exception("debe seleccionar un socio.");
+//            if (dto.telescopioid == 0) throw new exception("debe seleccionar un telescopio.");
+//            if (dto.monturaid == 0) throw new exception("debe seleccionar una montura.");
+//            if (dto.fechafin <= dto.fechainicio) throw new exception("la fecha de fin debe ser posterior a la de inicio.");
 
             
-            if (dto.CamaraId == null && dto.OcularId == null) throw new Exception("Debe solicitar al menos una cámara o un ocular.");
+//            if (dto.camaraid == null && dto.ocularid == null) throw new exception("debe solicitar al menos una cámara o un ocular.");
 
-            // Base de datos para validar cuando tengamos la BD
-            var telescopio = _repoEquipos.GetById(dto.TelescopioId) as Telescopio;
-            var montura = _repoEquipos.GetById(dto.MonturaId) as Montura;
+//            base de datos para validar cuando tengamos la bd
+//            var telescopio = _repoequipos.getbyid(dto.telescopioid) as telescopio;
+//            var montura = _repoequipos.getbyid(dto.monturaid) as montura;
 
-            if (telescopio == null || montura == null) throw new Exception("Equipo no encontrado.");
+//            if (telescopio == null || montura == null) throw new exception("equipo no encontrado.");
 
            
 
-            // Regla de peso
-            if (telescopio.Peso > montura.CargaUtil) throw new Exception("La montura no soporta el peso del telescopio solicitado.");
+//            // regla de peso
+//            if (telescopio.peso > montura.cargautil) throw new exception("la montura no soporta el peso del telescopio solicitado.");
 
-            // Regla de stock
-            if (telescopio.Cantidad <= 0) throw new Exception("No hay stock disponible del telescopio.");
-            if (montura.Cantidad <= 0) throw new Exception("No hay stock disponible de la montura.");
+//            // regla de stock
+//            if (telescopio.cantidad <= 0) throw new exception("no hay stock disponible del telescopio.");
+//            if (montura.cantidad <= 0) throw new exception("no hay stock disponible de la montura.");
 
-            // Regla de Cámara 
-            if (dto.CamaraId != null)
-            {
-                var camara = _repoEquipos.GetById(dto.CamaraId.Value) as Camara;
-                if (camara == null) throw new Exception("Cámara no encontrada.");
-                if (camara.Cantidad <= 0) throw new Exception("No hay stock de la cámara.");
+//            // regla de cámara 
+//            if (dto.camaraid != null)
+//            {
+//                var camara = _repoequipos.getbyid(dto.camaraid.value) as camara;
+//                if (camara == null) throw new exception("cámara no encontrada.");
+//                if (camara.cantidad <= 0) throw new exception("no hay stock de la cámara.");
 
-                if (montura.Tipo != "Ecuatorial" && montura.Tipo != "Hibrida")
-                    throw new Exception("Para prestar una cámara, la montura debe ser Ecuatorial o Híbrida.");
-            }
+//                if (montura.tipo != "ecuatorial" && montura.tipo != "hibrida")
+//                    throw new exception("para prestar una cámara, la montura debe ser ecuatorial o híbrida.");
+//            }
 
-            // 4. Mapeo ver dto
+//            // 4. mapeo ver dto
            
-            Prestamo nuevoPrestamo = MapperPrestamo.FromDtoAlta(dto, telescopio, montura);
+//            prestamo nuevoprestamo = mapperprestamo.fromdtoalta(dto, telescopio, montura);
 
-            // Actualizamos el stock 
-            telescopio.Cantidad--;
-            montura.Cantidad--;
-            // (Hacer lo mismo con cámara u ocular)
+//            // actualizamos el stock 
+//            telescopio.cantidad--;
+//            montura.cantidad--;
+//            // (hacer lo mismo con cámara u ocular)
 
-            _repoPrestamos.Add(nuevoPrestamo);
-            _repoPrestamos.SaveChanges();
-        }
-    }
+//            _repoprestamos.add(nuevoprestamo);
+//            _repoprestamos.savechanges();
+//        }
+//    }
 
-}
+//}
